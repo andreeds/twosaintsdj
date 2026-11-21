@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TWÖSAINTS</title>
+<meta name="description" content="TWÖSAINTS · DJ · Edmonton · Sacred & profane">
+<meta property="og:image" content="portrait.jpg">
+<link rel="icon" href="mark.png">
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,500;1,400&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{--obsidian:#0B0A0C;--bone:#F2EEE6;--oxblood:#681F32;--pewter:#A8A5A8;--line:rgba(242,238,230,.16)}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--obsidian);color:var(--bone);font-family:'Space Grotesk',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:460px;margin:0 auto;position:relative}
+
+  /* HERO */
+  .hero{position:relative;height:78vh;min-height:520px;max-height:760px;overflow:hidden}
+  .hero .bg{width:100%;height:100%;object-fit:cover;object-position:center 22%}
+  .hero::after{content:"";position:absolute;inset:0;
+    background:linear-gradient(180deg,rgba(11,10,12,.35) 0%,rgba(11,10,12,0) 25%,rgba(11,10,12,0) 55%,var(--obsidian) 100%)}
+  .hero .mark{position:absolute;top:22px;left:50%;transform:translateX(-50%);width:38px;z-index:2;opacity:.9}
+
+  /* IDENTITY */
+  .id{text-align:center;padding:0 24px;margin-top:-120px;position:relative;z-index:2}
+  .wordmark{width:100%;max-width:360px;filter:drop-shadow(0 4px 24px rgba(0,0,0,.6))}
+  .tag{font-family:'Bodoni Moda',serif;font-style:italic;font-size:19px;color:var(--bone);margin-top:14px}
+  .meta{font-size:11px;letter-spacing:.32em;text-transform:uppercase;color:var(--pewter);margin-top:10px}
+
+  /* LINKS */
+  .links{display:flex;flex-direction:column;gap:12px;padding:34px 24px 8px}
+  .links a{display:flex;align-items:center;justify-content:center;min-height:56px;padding:0 20px;
+    border:1px solid var(--line);border-radius:2px;color:var(--bone);text-decoration:none;
+    font-weight:500;font-size:13px;letter-spacing:.24em;text-transform:uppercase;
+    background:rgba(242,238,230,.03);transition:background .25s,border-color .25s,color .25s}
+  .links a:hover{background:var(--bone);color:var(--obsidian);border-color:var(--bone)}
+  .links a.feature{background:var(--oxblood);border-color:var(--oxblood)}
+  .links a.feature:hover{background:var(--bone);color:var(--obsidian);border-color:var(--bone)}
+  .links a{flex-direction:column;gap:4px}.links a small{font-size:10px;letter-spacing:.3em;opacity:.65}
+  .sc{color:var(--bone);display:inline-block;transition:color .2s}.sc:hover{color:#c9536f}.sc svg{width:40px;height:40px;fill:currentColor}
+
+  /* SOCIAL */
+  .social{display:flex;justify-content:center;gap:26px;padding:26px 0 10px}
+  .social a{color:var(--pewter);transition:color .2s}
+  .social a:hover{color:var(--bone)}
+  .social svg{width:22px;height:22px;fill:currentColor}
+
+  /* DIVIDER */
+  .div{display:flex;align-items:center;gap:14px;padding:38px 24px 0;color:var(--pewter)}
+  .div::before,.div::after{content:"";flex:1;height:1px;background:var(--line)}
+  .div span{font-size:10px;letter-spacing:.4em;text-transform:uppercase}
+
+  /* FORM */
+  form{padding:22px 24px 0}
+  h2{font-family:'Bodoni Moda',serif;font-weight:500;font-size:34px;line-height:1.05;margin-bottom:6px}
+  h2 em{color:#c9536f;font-style:italic}
+  .sub{color:var(--pewter);font-size:14px;margin-bottom:22px}
+  label{display:block;font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:var(--pewter);margin:16px 0 8px}
+  input,textarea,select{width:100%;background:transparent;border:0;border-bottom:1px solid var(--line);
+    color:var(--bone);font:inherit;font-size:16px;padding:8px 0;outline:none;border-radius:0}
+  select option{background:var(--obsidian)}
+  input:focus,textarea:focus,select:focus{border-bottom-color:var(--bone)}
+  textarea{resize:vertical;min-height:80px}
+  button{margin-top:28px;width:100%;min-height:56px;background:var(--bone);color:var(--obsidian);border:0;border-radius:2px;
+    font:inherit;font-weight:600;font-size:13px;letter-spacing:.28em;text-transform:uppercase;cursor:pointer;transition:background .2s,color .2s}
+  button:hover{background:var(--oxblood);color:var(--bone)}
+
+  footer{text-align:center;padding:56px 24px 40px}
+  footer img{width:30px;opacity:.5}
+  footer p{font-size:10px;letter-spacing:.4em;text-transform:uppercase;color:#5d5a5e;margin-top:14px}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="hero">
+    <img class="bg" src="portrait.jpg" alt="TWÖSAINTS portrait">
+    <img class="mark" src="mark.png" alt="">
+  </header>
+
+  <section class="id">
+    <img class="wordmark" src="wordmark.png" alt="TWÖSAINTS">
+    <p class="tag">Devotion &amp; desire.</p>
+    <p class="meta">DJ · Edmonton · Baile Funk / Pop</p>
+  </section>
+
+  <!-- ===== EDIT YOUR 3 GIGS (date, venue, ticket link) ===== -->
+  <nav class="links">
+    <a class="feature" href="#"><span>DEC 05 · Venue Name</span><small>Tickets</small></a>
+    <a href="#"><span>DEC 19 · Venue Name</span><small>Tickets</small></a>
+    <a href="#"><span>DEC 31 · Venue Name</span><small>Tickets</small></a>
+  </nav>
+
+  <!-- ===== SOCIAL ICONS (replace handles) ===== -->
+  <footer><a href="https://soundcloud.com/twosaintsdj" class="sc" aria-label="SoundCloud"><svg viewBox="0 0 24 24"><path d="M1.2 14.4l.3-2-.3-2.1c0-.1-.1-.1-.1-.1s-.1 0-.1.1L.7 12.4l.3 2c0 .1.1.1.1.1s.1 0 .1-.1zm1.6 1.2l.4-3.2-.4-3.3c0-.1-.1-.1-.1-.1-.1 0-.1.1-.1.1l-.3 3.3.3 3.2c0 .1.1.1.1.1.1 0 .1 0 .1-.1zm1.7.3l.3-3.5-.3-3.5c0-.1-.1-.2-.2-.2s-.2.1-.2.2l-.3 3.5.3 3.5c0 .1.1.2.2.2s.2-.1.2-.2zm1.7.1l.3-3.6-.3-3.8c0-.1-.1-.2-.2-.2-.2 0-.2.1-.2.2l-.3 3.8.3 3.6c0 .1.1.2.2.2.1 0 .2-.1.2-.2zm1.7 0l.2-3.6-.2-5.7c0-.2-.1-.3-.3-.3-.1 0-.2.1-.3.3l-.2 5.7.2 3.6c0 .2.1.3.3.3.2 0 .3-.1.3-.3zm1.7 0l.2-3.6-.2-6.5c0-.2-.2-.3-.3-.3-.2 0-.3.1-.3.3l-.2 6.5.2 3.6c0 .2.1.3.3.3.2 0 .3-.1.3-.3zm2 0l.2-3.6-.2-7c0-.2-.2-.4-.4-.4s-.4.2-.4.4l-.2 7 .2 3.6c0 .2.2.4.4.4s.4-.2.4-.4zM21 9.9c-.4 0-.8.1-1.2.2-.3-3-2.8-5.4-5.9-5.4-.8 0-1.5.1-2.2.4-.2.1-.3.2-.3.4v10.4c0 .2.2.4.4.4H21c1.7 0 3-1.3 3-3s-1.3-3-3-3z"/></svg></a>
+    <p>Sacred &amp; profane · © TWÖSAINTS</p>
+  </footer>
+</div>
+</body>
+</html>
